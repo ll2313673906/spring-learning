@@ -70,7 +70,7 @@ public class PostDaoTest {
     @Test
     public void deleteInsert() {
         List<Integer> list = new ArrayList<>();
-        list.add(1);
+        list.add(3);
         list.add(2);
         int[] rows = postDao.deleteInsert(list);
        assertEquals(2,rows.length);
@@ -79,19 +79,32 @@ public class PostDaoTest {
 
     @Test
     public void deleteById() {
+        int n = postDao.deleteById(1);
+        assertEquals(1, n);
+        System.out.println(n);
     }
 
     @Test
     public void getById() {
+        Post post = postDao.getById(5);
+        assertNotNull(post);
+        System.out.println(post);
 
     }
 
     @Test
     public void getByKeywords() {
+        List<Post> postList = postDao.getByKeywords("测试");
+        assertNotNull(postList);
+        System.out.println(postList.size());
+
     }
 
     @Test
     public void getCount() {
+        int n = postDao.getCount();
+        assertNotNull(n);
+        System.out.println(n);
     }
 
 

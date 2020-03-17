@@ -51,7 +51,7 @@ public interface PostDao {
      * 根据关键字查询post
      * @return List<Post>
      */
-    List<Post> getByKeywords();
+    List<Post> getByKeywords(String keywords);
 
     /**
      * 同级帖子的数量

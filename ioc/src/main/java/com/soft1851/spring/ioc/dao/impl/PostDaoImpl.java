@@ -23,6 +23,11 @@ public class PostDaoImpl implements PostDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    private PostDao postDao;
+
+    @Autowired Post post ;
+
     @Override
     public int insert(Post post) {
         String sql = "INSERT INTO t_post VALUES (NULL, ?, ?, ?, ?, ?)";
@@ -55,7 +60,7 @@ public class PostDaoImpl implements PostDao {
 
     @Override
     public int[] deleteInsert(List<Integer> idList) {
-       String sql = "DELECT FROM t_post WHERE post_id=?";
+       String sql = "DELETE FROM t_post WHERE post_id= ?";
        return jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
            @Override
            public void setValues(PreparedStatement preparedStatement, int i) throws SQLException {
@@ -71,22 +76,25 @@ public class PostDaoImpl implements PostDao {
 
     @Override
     public int deleteById(int id) {
-       String sql = "DELECT FROM t_post WHERE post_id=?";
+       String sql = "DELETE FROM t_post WHERE post_id=?";
        return jdbcTemplate.update(sql,id);
     }
 
     @Override
     public Post getById(int id) {
-        String sql = "SELECT * FROM t_forum WHERE ";
+        String sql = "SELECT * FROM t_post WHERE post_id = ?";
         Object[] args = {id};
         return jdbcTemplate.queryForObject(sql,args,new BeanPropertyRowMapper<>(Post.class));
 
     }
 
     @Override
-    public List<Post> getByKeywords() {
-        return null;
+    public List<Post> getByKeywords(String keywords) {
+        String sql = "SELECT * FROM t_post WHERE title LIKE '%' ? '%'";
+        Object[] args = {keywords};
+        return jdbcTemplate.query(sql, args, new BeanPropertyRowMapper<>(Post.class));
     }
+
 
     @Override
     public int getCount() {
