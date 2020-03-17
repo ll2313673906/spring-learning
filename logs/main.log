@@ -1,0 +1,1 @@
+2020-03-17.10:04:05 INFO  [main] com.soft1851.spring.ioc.app.TestStudent.main:22  Student{id=1001, name='liulian', phones=[iPhone6, iPhone7, iPhone8, iPhone9]}

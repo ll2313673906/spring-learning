@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="hello" class="com.soft1851.spring.ioc.entity.Hello"/>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+<!--  通过配置文件进行扫包-->
+    <context:component-scan base-package="com.soft1851.spring.ioc.config"/>
+    <bean id="hello" class="com.soft1851.spring.ioc.entity.Hello"/>
+    <bean id="student" class="com.soft1851.spring.ioc.entity.Student">
+        <property name="id" value="1001"/>
+        <property name="name" value="liulian"/>
+        <property name="phones" >
+            <list>
+                <value>iPhone6</value>
+                <value>iPhone7</value>
+                <value>iPhone8</value>
+                <value>iPhone9</value>
+            </list>
+        </property>
+    </bean>
 </beans>
