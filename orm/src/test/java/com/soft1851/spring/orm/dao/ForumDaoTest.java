@@ -1,6 +1,8 @@
-package com.soft1851.spring.ioc.dao;
+package com.soft1851.spring.orm.dao;
 
-import com.soft1851.spring.ioc.config.SpringDataSourceConfig;
+
+import com.soft1851.spring.orm.config.SpringDataSourceConfig;
+import com.soft1851.spring.orm.entity.Forum;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * @Author F*WT
