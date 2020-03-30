@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="referrer" content="never">
+    <title>BiLiBiLi</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            font-size: 19px;
+        }
+        header {
+            background: url(https://myicon.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E7%89%87/bili.png?Expires=1585394444&OSSAccessKeyId=TMP.3KdgNhc8t951XueiBGQxXeozEeR8whpT8cVTPb5jpm4peZajdj6EuCqgvAWMydgWWQhUm4K83P6AjRx62MqXrRYYCtVBe3&Signature=0nzn%2BUpb4fD%2BgbPyJfrNymJYgyY%3D);
+            height: 330px;
+            width: 100%;
+        }
+        nav {
+            width: 100%;
+        }
+        nav ul {
+            display: flex;
+            width: 100%;
+            margin-left: 0;
+
+
+        }
+        .nav-ul2 {
+            background-color: rgb(237,242,249);
+        }
+        .nav-ul2 li{
+            height: 30px;
+            line-height: 30px;
+        }
+        nav ul li {
+            list-style: none;
+            flex: 1;
+            height: 77px;
+            display: flex;
+            justify-content: center;
+
+        }
+        nav ul li img{
+            width: 30px;
+            height: 30px;
+        }
+        main {
+            width: 1510px;
+            min-height: 400px;
+            margin: 0 auto;
+        }
+        .litter-nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(237,242,249);
+
+        }
+        .litter-nav ul{
+            display: flex;
+            width: 1034px;
+        }
+        .litter-nav ul li{
+            list-style: none;
+            flex: 1;
+
+        }
+        .checkgroup {
+            height: 55px;
+            line-height: 55px;
+        }
+        select {
+            height: 35px;
+            border-radius: 5px;
+            width: 100px;
+        }
+        .row {
+            display: flex;
+            width: 100%;
+           border-bottom: 1px solid #eeeeee;
+        }
+        .row:hover {
+            box-shadow: -1px -1px 2px 2px #eeeeee;
+        }
+        [class*="col-"]{
+            height: 140px;
+        }
+        .col-1 {
+            flex: 0 0 6%;
+            text-align: center;
+            line-height: 140px;
+            font-size: 2rem;
+            color:rgb(184,192,204);
+
+        }
+        .col-2 {
+            flex: 0 0 12%;
+
+
+        }
+        .col-3 {
+            flex: 0 0 65%;
+        }
+        .col-3 span{
+            margin-left: 20px;
+            color: rgb(184,192,204);
+        }
+        h4 {
+            margin-left: 15px;
+        }
+        .col-4 {
+            flex: 1;
+            text-align: center;
+
+        }
+        .span-4{
+            margin-top: 20px;
+            display: block;
+        }
+        .col-2 img {
+            width: 100%;
+            height: 70%;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="https://student-manage-ll.oss-cn-beijing.aliyuncs.com/test/bili.png" alt="">
+</header>
+<main>
+    <nav>
+        <ul>
+            <li><img src="https://student-manage-ll.oss-cn-beijing.aliyuncs.com/test/QQ%E6%88%AA%E5%9B%BE20200328184832.png" alt="">全站榜</li>
+            <li><img src="https://student-manage-ll.oss-cn-beijing.aliyuncs.com/test/QQ%E6%88%AA%E5%9B%BE20200328184840.png" alt="">原创榜</li>
+            <li><img src="https://student-manage-ll.oss-cn-beijing.aliyuncs.com/test/QQ%E6%88%AA%E5%9B%BE20200328184846.png" alt="">新番榜</li>
+            <li><img src="https://student-manage-ll.oss-cn-beijing.aliyuncs.com/test/QQ%E6%88%AA%E5%9B%BE20200328184852.png" alt="">影视榜</li>
+            <li><img src="https://student-manage-ll.oss-cn-beijing.aliyuncs.com/test/QQ%E6%88%AA%E5%9B%BE20200328184858.png" alt="">新人榜</li>
+        </ul>
+
+    </nav>
+    <div class="litter-nav">
+        <ul class="nav-ul2">
+            <li>全国</li>
+            <li>动画</li>
+            <li>国创相关</li>
+            <li>音乐</li>
+            <li>舞蹈</li>
+            <li>游戏</li>
+            <li>科技</li>
+            <li>数码</li>
+            <li>生活</li>
+            <li>鬼畜</li>
+            <li>时尚</li>
+            <li>娱乐</li>
+            <li>影视</li>
+        </ul>
+        <div class="checkgroup">
+            <select>
+                <option value="全部投稿">全部投稿</option>
+                <option value ="近期投稿">近期投稿</option>
+            </select>
+            <select>
+                <option value="三月排行">三月排行</option>
+                <option value ="日排行">日排行</option>
+                <option value="周排行">周排行</option>
+                <option value ="月排行">月排行</option>
+            </select>
+        </div>
+    </div>
+    <div class="context">
+        <div class="row" th:each="rank:${ranks}">
+            <div class="col-1" th:text="${rank.id}"></div>
+            <div class="col-2"><img th:src="${rank.pic}" alt="icon"></div>
+            <div class="col-3">
+                <h4 th:text="${rank.title}"></h4>
+                <span th:text="${rank.duration}">3443.2万</span>
+                <span>45.5万</span>
+                <span th:text="${rank.author}"></span>
+            </div>
+            <div class="col-4">
+                <span class="span-4">34358454</span>
+                <p>综合得分</p>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

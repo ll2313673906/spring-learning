@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="referrer" content="never">
+    <title>主页</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        img{
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<h2>Spring MVC</h2>
+<P th:text="${message}"></P>
+<hr>
+<div th:each="book:${bookList}">
+    <p th:text="${book.bookName}">图书的名称</p>
+    <img th:src="${book.cover} "/>
+</div>
+<div class="card" style="width: 18rem;" th:each="book:${bookList}">
+    <img th:src="${book.cover} " class="card-img-top" th:alt="${book.bookName}">
+    <div class="card-body">
+        <h5 class="card-title" th:text="${book.bookName}">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+</body>
+</html>

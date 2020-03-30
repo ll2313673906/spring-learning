@@ -6,12 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ioc" />
         <module name="web" />
+        <module name="ioc" />
+        <module name="spider" />
         <module name="aop" />
+        <module name="annotation" />
         <module name="orm" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="mybatis-xml" target="1.11" />
+      <module name="spring" target="1.11" />
+      <module name="spring-annotation" target="1.11" />
+      <module name="web-annotation" target="1.11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
