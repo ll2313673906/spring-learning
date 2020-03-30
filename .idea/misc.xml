@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/web/pom.xml" />
         <option value="$PROJECT_DIR$/annotation/pom.xml" />
         <option value="$PROJECT_DIR$/spider/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-xml/pom.xml" />
       </list>
     </option>
   </component>

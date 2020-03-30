@@ -11,11 +11,11 @@
         <module name="spider" />
         <module name="aop" />
         <module name="annotation" />
+        <module name="mybatis-xml" />
         <module name="orm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
-      <module name="mybatis-xml" target="1.11" />
       <module name="spring" target="1.11" />
       <module name="spring-annotation" target="1.11" />
       <module name="web-annotation" target="1.11" />
