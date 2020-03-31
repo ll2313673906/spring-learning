@@ -4,7 +4,22 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <!--配置-->
 <configuration>
+<!--开启驼峰式映射配置-->
         <settings>
                 <setting name="mapUnderscoreToCamelCase" value="true"/>
         </settings>
+<!--类型命名-->
+        <typeAliases>
+
+                <typeAlias type="com.soft1851.spring.mybatis.entity.Forum" alias="Forum"/>
+                <typeAlias type="com.soft1851.spring.mybatis.entity.Teacher" alias="Teacher"/>
+                <typeAlias type="com.soft1851.spring.mybatis.entity.Clazz" alias="Clazz"/>
+                <typeAlias type="com.soft1851.spring.mybatis.entity.Student" alias="Student"/>
+                <typeAlias type="com.soft1851.spring.mybatis.entity.Course" alias="Course"/>
+                <typeAlias type="com.soft1851.spring.mybatis.entity.MatterDto" alias="MatterDto"/>
+                <typeAlias type="com.soft1851.spring.mybatis.entity.ClazzVo" alias="ClazzVo"/>
+                <typeAlias type="com.soft1851.spring.mybatis.entity.MatterVo" alias="MatterVo"/>
+                <typeAlias type="com.soft1851.spring.mybatis.entity.CourseStudent" alias="CourseStudent"/>
+        </typeAliases>
+
 </configuration>
